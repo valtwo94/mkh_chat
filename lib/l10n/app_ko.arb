@@ -1,0 +1,26 @@
+{
+  "locale": "KR",
+  "walkthroughMessage": "데이트 코스 추천, 예약 기능으로 쉽고 편리하게 계획하세요",
+  "@walkthroughMessage": {
+    "description": "사용자에게 파트너와 연결하도록 권장하는 메시지"
+  },
+  "termsAndPrivacy": "이용 약관 및 개인정보 보호정책",
+  "@termsAndPrivacy": {
+    "description": "이용 약관 및 개인정보 보호정책 라벨"
+  },
+  "startMessaging": "메시지 시작",
+  "verificationStep1Title": "휴대폰 인증",
+  "verificationStep1Subtitle": "국가 코드를 확인하시고 전화번호를 입력해주세요",
+  "verificationStep2Title": "인증번호 입력",
+  "verificationStep2Subtitle": "입력하신 휴대폰 번호로 코드를 보냈습니다.",
+  "resendCode": "코드 재전송",
+  "@startMessaging": {
+    "description": "메시지 시작 버튼 라벨"
+  },
+  "phoneNumber": "핸드폰 번호",
+  "sendCode": "인증번호 전송",
+  "yourProfile": "프로필 설정",
+  "save": "저장",
+  "firstNamePlaceholder": "이름 (필수값)",
+  "lastNamePlaceholder": "성 (필수값)"
+}

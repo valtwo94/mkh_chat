@@ -1,0 +1,26 @@
+{
+  "locale": "US",
+  "walkthroughMessage": "Plan your date easily and conveniently with our date course recommendation and reservation feature",
+  "@walkthroughMessage": {
+    "description": "Message encouraging users to connect with their partner"
+  },
+  "termsAndPrivacy": "Terms & Privacy Policy",
+  "@termsAndPrivacy": {
+    "description": "Label for terms and privacy policy"
+  },
+  "startMessaging": "Start Messaging",
+  "verificationStep1Title": "Enter Your Phone Number",
+  "verificationStep1Subtitle": "Please confirm your country code and enter\n your phone number",
+  "verificationStep2Title": "Enter Code",
+  "verificationStep2Subtitle": "We have sent you an SMS with the code\nto",
+  "resendCode": "Resend Code",
+  "@startMessaging": {
+    "description": "Button label to start messaging"
+  },
+  "phoneNumber": "Phone Number",
+  "sendCode": "Send Code",
+  "yourProfile": "Your Profile",
+  "save": "Save",
+  "firstNamePlaceholder": "First Name (Required)",
+  "lastNamePlaceholder": "Last Name (Required)"
+}

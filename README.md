@@ -1,16 +1,8 @@
 # mkh_chat
 
-A new Flutter project.
+커플 채팅 앱
 
-## Getting Started
+## 참고
 
-This project is a starting point for a Flutter application.
+- [디자인 베이스](https://www.figma.com/community/file/980835105690634391/chateo-ui-kit-messenger-app?searchSessionId=lyxyboah-bwzb89z92kj)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
