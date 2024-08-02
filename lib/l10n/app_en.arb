@@ -22,5 +22,8 @@
   "yourProfile": "Your Profile",
   "save": "Save",
   "firstNamePlaceholder": "First Name (Required)",
-  "lastNamePlaceholder": "Last Name (Required)"
+  "lastNamePlaceholder": "Last Name (Required)",
+  "delete": "Delete",
+  "share": "Share",
+  "shareChattingRoom": "Chat"
 }

@@ -3,9 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:mkh_chat/constants/colors.dart';
 import 'package:mkh_chat/constants/fonts.dart';
+import 'package:mkh_chat/pages/chat/calendar.dart';
+import 'package:mkh_chat/pages/chat/contents.dart';
+import 'package:mkh_chat/pages/chat/index.dart';
+import 'package:mkh_chat/pages/chat/love_letter.dart';
+import 'package:mkh_chat/pages/chat/picture.dart';
+import 'package:mkh_chat/pages/chat/schedule/create.dart';
+import 'package:mkh_chat/pages/main/index.dart';
 import 'package:mkh_chat/pages/main/more/profile_account.dart';
 import 'package:mkh_chat/pages/verification.dart';
 import 'package:mkh_chat/pages/walkthrough.dart';
+import 'package:mkh_chat/providers/main/index.dart';
+import 'package:mkh_chat/providers/main/location.dart';
 import 'package:mkh_chat/providers/profile_account.dart';
 import 'package:mkh_chat/providers/verification.dart';
 import 'package:provider/provider.dart';
@@ -55,10 +64,23 @@ class _MyAppState extends State<MyApp> {
       },
       theme: ThemeData(
         primaryColor: AppColors.primaryLight,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: AppColors.backgroundLight,
         canvasColor: AppColors.keyboardLight,
+        floatingActionButtonTheme: FloatingActionButtonThemeData(
+          backgroundColor: AppColors.primaryLight,
+        ),
+        drawerTheme: const DrawerThemeData(
+          backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent
+        ),
         appBarTheme: const AppBarTheme(
           backgroundColor: Colors.white,
+          surfaceTintColor: Colors.transparent
+        ),
+        tabBarTheme: TabBarTheme(
+          indicatorColor: AppColors.primaryLight,
+          labelColor: AppColors.primaryLight
         ),
         textTheme: TextTheme(
           headlineLarge: Fonts.heading1,
@@ -69,7 +91,7 @@ class _MyAppState extends State<MyApp> {
           displaySmall: Fonts.body2,
         ),
         iconTheme: const IconThemeData(
-          color: Colors.black
+          color: Colors.black,
         ),
         inputDecorationTheme: InputDecorationTheme(
           fillColor: AppColors.textFieldLight,
@@ -91,12 +113,12 @@ class _MyAppState extends State<MyApp> {
             color: AppColors.disabledLight
           )
         ),
-
       ),
       darkTheme: ThemeData(
           primaryColor: AppColors.primaryDark,
+          visualDensity: VisualDensity.adaptivePlatformDensity,
           scaffoldBackgroundColor: AppColors.backgroundLight),
-      initialRoute: Routes.profileAccount,
+      initialRoute: Routes.chat,
       onGenerateRoute: (settings) {
         switch (settings.name) {
           case Routes.walkthrough:
@@ -105,6 +127,20 @@ class _MyAppState extends State<MyApp> {
             return  Routes.createRoute(const VerificationPage());
           case Routes.profileAccount:
             return Routes.createRoute(const ProfileAccountPage());
+          case Routes.main:
+            return Routes.createRoute(const MainPage());
+          case Routes.chat:
+            return Routes.createRoute(const ChatPage());
+          case Routes.chatCalendar:
+            return Routes.createAnimationRoute(const ChatCalendarPage());
+          case Routes.chatPicture:
+            return Routes.createAnimationRoute(const ChatPicturePage());
+          case Routes.chatContents:
+            return Routes.createAnimationRoute(const ChatContentsPage());
+          case Routes.chatLoveLetter:
+            return Routes.createAnimationRoute(const ChatLoveLetterPage());
+          case Routes.scheduleCreate:
+            return Routes.createAnimationRoute(const ScheduleCreatePage());
           default:
             return null;
         }
@@ -114,7 +150,9 @@ class _MyAppState extends State<MyApp> {
         return MultiProvider(
           providers: [
             ChangeNotifierProvider(create: (_) => VerificationProvider(locale)),
-            ChangeNotifierProvider(create: (_) => ProfileAccountProvider(locale))
+            ChangeNotifierProvider(create: (_) => ProfileAccountProvider(locale)),
+            ChangeNotifierProvider(create: (_) => MainProvider(locale)),
+            ChangeNotifierProvider(create: (_) => LocationProvider())
           ],
           child: child,
         );

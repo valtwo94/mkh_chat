@@ -22,5 +22,8 @@
   "yourProfile": "프로필 설정",
   "save": "저장",
   "firstNamePlaceholder": "이름 (필수값)",
-  "lastNamePlaceholder": "성 (필수값)"
+  "lastNamePlaceholder": "성 (필수값)",
+  "delete": "삭제",
+  "share": "공유하기",
+  "shareChattingRoom": "채팅"
 }
